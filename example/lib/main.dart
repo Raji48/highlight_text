@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                   content: Text(
                       "Flutter's engine, written primarily in C++, provides low-level rendering support using Google's Skia graphics library."),
                   actions: <Widget>[
-                    TextButton(
+                    FlatButton(
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                   content: Text(
                       "Open-source software (OSS) is a type of computer software in which source code is released under a license in which the copyright holder grants users the rights to study, change, and distribute the software to anyone and for any purpose."),
                   actions: <Widget>[
-                    TextButton(
+                    FlatButton(
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                   content: Text(
                       "Android is a mobile operating system developed by Google."),
                   actions: <Widget>[
-                    TextButton(
+                    FlatButton(
                       onPressed: () {
                         Navigator.of(contextb).pop();
                       },
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                   content: Text(
                       "iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware."),
                   actions: <Widget>[
-                    TextButton(
+                    FlatButton(
                       onPressed: () {
                         Navigator.of(contextb).pop();
                       },
@@ -121,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                   content: Text(
                       "Fuchsia is a capability-based operating system currently being developed by Google."),
                   actions: <Widget>[
-                    TextButton(
+                    FlatButton(
                       onPressed: () {
                         Navigator.of(contextb).pop();
                       },
@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                   content: Text(
                       "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. It is considered one of the Big Four technology companies, alongside Amazon, Apple and Facebook."),
                   actions: <Widget>[
-                    TextButton(
+                    FlatButton(
                       onPressed: () {
                         Navigator.of(contextb).pop();
                       },
@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                   content: Text(
                       "Development frameworks are tools and libraries that other developers have created to either reach a particular technical goal or to make developing in a particular language easier."),
                   actions: <Widget>[
-                    TextButton(
+                    FlatButton(
                       onPressed: () {
                         Navigator.of(contextb).pop();
                       },

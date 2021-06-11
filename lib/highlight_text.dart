@@ -10,8 +10,8 @@ class HighlightedWord {
   final VoidCallback onTap;
 
   HighlightedWord({
-    required this.onTap,
-    required this.textStyle,
+    @required this.onTap,
+    @required this.textStyle,
   });
 }
 
@@ -20,18 +20,18 @@ class TextHighlight extends StatelessWidget {
   final LinkedHashMap<String, HighlightedWord> words;
   final TextStyle textStyle;
   final TextAlign textAlign;
-  final TextDirection? textDirection;
+  final TextDirection textDirection;
   final bool softWrap;
   final TextOverflow overflow;
   final double textScaleFactor;
-  final int? maxLines;
-  final Locale? locale;
-  final StrutStyle? strutStyle;
+  final int maxLines;
+  final Locale locale;
+  final StrutStyle strutStyle;
   final bool enableCaseSensitive;
 
   TextHighlight({
-    required this.text,
-    required this.words,
+    @required this.text,
+    @required this.words,
     this.textStyle = const TextStyle(
       fontSize: 25.0,
       color: Colors.black,
@@ -72,8 +72,9 @@ class TextHighlight extends StatelessWidget {
             word, '<highlight>${words.keys.toList().indexOf(word)}<highlight>');
       } else {
         int strIndex = bindedText.toLowerCase().indexOf(word.toLowerCase());
-        bindedText = bindedText.replaceRange(strIndex, strIndex + word.length,
-            '<highlight>${words.keys.toList().indexOf(word)}<highlight>');
+        if (strIndex > 0)
+          bindedText = bindedText.replaceRange(strIndex, strIndex + word.length,
+              '<highlight>${words.keys.toList().indexOf(word)}<highlight>');
       }
     }
 
@@ -89,18 +90,18 @@ class TextHighlight extends StatelessWidget {
     String nextToDisplay = bindedWords.first;
     bindedWords.removeAt(0);
 
-    int? index = int.tryParse(nextToDisplay);
+    int index = int.tryParse(nextToDisplay);
 
     if (index != null) {
       String currentWord = words.keys.toList()[index];
       return TextSpan(
         text: currentWord,
-        style: words[currentWord]!.textStyle,
+        style: words[currentWord].textStyle,
         children: [
           _buildSpan(bindedWords),
         ],
         recognizer: TapGestureRecognizer()
-          ..onTap = () => words[currentWord]!.onTap(),
+          ..onTap = () => words[currentWord].onTap(),
       );
     }
 
